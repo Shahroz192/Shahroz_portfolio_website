@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { ChevronDown, ExternalLink, Github, Mail, Phone, MapPin, Calendar, Briefcase, GraduationCap, Award } from 'lucide-react';
+import StaggeredAnimation from '@/components/ui/staggered-animation';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -320,7 +321,7 @@ export default function Portfolio() {
               Showcase of my AI and Machine Learning projects
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <StaggeredAnimation className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="h-full flex flex-col bg-slate-800 border-slate-700 hover:border-cyan-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group">
                 <CardHeader>
@@ -359,7 +360,7 @@ export default function Portfolio() {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </StaggeredAnimation>
         </div>
       </section>
 
@@ -374,7 +375,7 @@ export default function Portfolio() {
               My technical skills and areas of expertise
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggeredAnimation className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {Object.entries(skills).map(([category, skillList], index) => (
               <Card key={index} className="bg-slate-800 border-slate-700 hover:border-cyan-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group">
                 <CardHeader>
@@ -391,7 +392,7 @@ export default function Portfolio() {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </StaggeredAnimation>
         </div>
       </section>
 
