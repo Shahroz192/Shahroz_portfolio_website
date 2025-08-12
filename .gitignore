@@ -9,6 +9,8 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+.windsurf/
+.codacy/
 
 # testing
 /coverage
@@ -56,3 +58,6 @@ server.log
 # testing
 test/
 prompt/
+
+#Ignore windsurf AI rules
+.windsurfrules
