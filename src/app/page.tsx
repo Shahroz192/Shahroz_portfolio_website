@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { animate } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -39,7 +40,15 @@ export default function Portfolio() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const top = element.offsetTop;
+      animate(document.documentElement.scrollTop || document.body.scrollTop, top, {
+        type: "spring",
+        stiffness: 200,
+        damping: 25,
+        onUpdate: (latest) => {
+          window.scrollTo(0, latest);
+        }
+      });
     }
   };
 
