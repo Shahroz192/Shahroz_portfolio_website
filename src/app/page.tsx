@@ -9,8 +9,6 @@ import { Separator } from '@/components/ui/separator';
 import { ChevronDown, X, ExternalLink, Github, Mail, Phone, MapPin, Calendar, Briefcase, GraduationCap, Award } from 'lucide-react';
 import StaggeredAnimation from '@/components/ui/staggered-animation';
 
-// --- Reusable Gradient Border Card Component ---
-// Encapsulates the gradient border style for a consistent, high-end "Apple-style" look.
 const GradientCard = ({ children, className }: { children: React.ReactNode; className?: string }) => (
   <div className={`p-px rounded-xl bg-gradient-to-b from-slate-700 to-transparent transition-all duration-300 hover:bg-slate-600 ${className}`}>
     <div className="rounded-[11px] h-full bg-slate-900">
@@ -23,7 +21,6 @@ const GradientCard = ({ children, className }: { children: React.ReactNode; clas
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
-  // --- State for the interactive skill filter ---
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
 
 
@@ -69,11 +66,9 @@ export default function Portfolio() {
 
   const handleSkillSelect = (skill: string) => {
     setSelectedSkill(skill);
-    // Smoothly scroll to the projects section to show the filter results
     scrollToSection('projects');
   }
   
-  // --- Updated Project Data with "problem" statement ---
   const projects = [
     {
       title: "Emergency Helper: Edge-Optimized AI for Environmental Emergencies",
@@ -127,11 +122,10 @@ export default function Portfolio() {
 
   const skills = {
     "Core Programming": ["Python", "JavaScript", "TypeScript", "HTML/CSS", "SQL"],
-    "Machine Learning": ["PyTorch", "Scikit-Learn", "TensorFlow", "OpenCV", "MediaPipe", "NLTK", "spaCy"],
-    "Deep Learning": ["Neural Networks", "CNN", "RNN", "LSTM", "Transformers", "Transfer Learning"],
+    "Machine Learning & Deep Learning": ["PyTorch", "Scikit-Learn", "TensorFlow", "Transformers", "OpenCV", "MediaPipe", "NLTK", "spaCy"],
     "MLOps & Deployment": ["Docker", "Kubernetes", "FastAPI", "Flask", "REST APIs", "MLflow", "CI/CD"],
-    "LLM & AI Engineering": ["LangChain", "LangGraph", "CrewAI", "Hugging Face", "LLaMA", "Google Gemini AI"],
-    "Data Engineering": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "FAISS", "Vector Embeddings"],
+    "LLM-Powered Applications": ["LangChain", "LangGraph", "CrewAI", "Hugging Face", "LLaMA", "Google Gemini AI"],
+    "Data Analysis & Visualization": ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
     "Development Tools": ["Git", "PyCharm", "VS Code", "Jupyter Notebooks", "AWS", "Linux"]
   };
 
@@ -183,7 +177,6 @@ export default function Portfolio() {
       </nav>
 
       <main>
-        {/* --- Revamped Hero Section with Impact-Driven Content --- */}
         <section id="home" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
           <div className="absolute inset-0 z-0">
               <div className="absolute bottom-0 left-[-20%] right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(56,189,248,0.2),rgba(255,255,255,0))]"></div>
@@ -199,7 +192,6 @@ export default function Portfolio() {
                 <p className="text-xl md:text-2xl text-slate-300 font-medium">
                   AI & Machine Learning Developer
                 </p>
-                {/* --- Updated Value Proposition --- */}
                 <p className="text-lg text-slate-400 leading-relaxed max-w-3xl mx-auto">
                   I build intelligent, full-stack AI solutions that translate complex data into real-world impact. From optimizing computer vision pipelines for real-time performance to deploying fine-tuned LLMs that solve specific business problems, I specialize in bridging the gap between raw data and production-ready applications.
                 </p>
@@ -225,7 +217,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* --- Revamped About Section --- */}
         <section id="about" className="py-24 md:py-32 px-6 bg-slate-900/70">
           <div className="container mx-auto max-w-4xl">
             <StaggeredAnimation>
@@ -278,7 +269,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* --- Revamped Experience Section with Impact-Driven Content --- */}
         <section id="experience" className="py-24 md:py-32 px-6">
           <div className="container mx-auto max-w-4xl">
              <StaggeredAnimation>
@@ -331,7 +321,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* --- Interactive Skills Section --- */}
         <section id="skills" className="py-24 md:py-32 px-6 bg-slate-900/70">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
@@ -379,7 +368,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* --- Filterable Projects Section --- */}
         <section id="projects" className="py-24 md:py-32 px-6">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
@@ -410,7 +398,6 @@ export default function Portfolio() {
                             <CardTitle className="text-xl leading-tight text-slate-100 group-hover:text-cyan-300 transition-colors">{project.title}</CardTitle>
                             <Badge variant="secondary" className="text-xs bg-slate-700 text-slate-300 flex-shrink-0">{project.period}</Badge>
                           </div>
-                          {/* --- Added Problem Statement --- */}
                           <CardDescription className="text-base text-cyan-400/80 pt-4 font-semibold">
                             {project.problem}
                           </CardDescription>
@@ -453,7 +440,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* --- Revamped Contact Section --- */}
         <section id="contact" className="py-24 md:py-32 px-6 bg-slate-900/70">
           <div className="container mx-auto max-w-3xl">
             <StaggeredAnimation>
@@ -507,7 +493,6 @@ export default function Portfolio() {
         </section>
       </main>
 
-      {/* --- Footer --- */}
       <footer className="py-8 px-6 border-t border-slate-800">
         <div className="container mx-auto max-w-6xl text-center">
           <p className="text-slate-500 text-sm">
