@@ -10,9 +10,8 @@
 .codacy/
 /coverage
 /.next/
-/out/
-.gemini/
 .qwen/
+docs/
 QWEN.md
 GEMINI.md
 /build
