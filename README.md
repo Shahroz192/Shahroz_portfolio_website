@@ -1,164 +1,92 @@
-# 🚀 Shahroz Butt's Portfolio Website
+# Shahroz Butt's Portfolio Website
 
-A modern, responsive portfolio website built with cutting-edge technologies to showcase skills, projects, and experience as an AI & Machine Learning Developer.
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![NPM Version](https://img.shields.io/npm/v/next/latest)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-## 🎯 About This Project
+This is a modern, responsive portfolio website for Muhammad Shahroz Butt, an AI & Machine Learning Developer. It's built with Next.js 15, TypeScript, and Tailwind CSS, and showcases his skills, projects, and experience.
 
-This portfolio website serves as a professional showcase for Muhammad Shahroz Butt, an AI & Machine Learning Developer with expertise in:
-- Computer Vision
-- LLM Deployment
-- MLOps
+This portfolio website serves as a professional showcase for Muhammad Shahroz Butt, an AI & Machine Learning Developer with expertise in Computer Vision, LLM Deployment, and MLOps. The website features a clean, dark-themed design with smooth animations and a responsive layout that works on all devices.
 
-The website features a clean, dark-themed design with smooth animations and responsive layout that works on all devices.
+## Key Features
 
-## ✨ Technology Stack
+- **Modern Tech Stack:** Built with Next.js 15, React 19, and TypeScript for a robust and type-safe application.
+- **Responsive Design:** Fully responsive layout that looks great on desktops, tablets, and mobile devices.
+- **UI Components:** Utilizes `shadcn/ui` for a set of high-quality, accessible, and composable components.
+- **Real-time Communication:** Integrates Socket.IO for real-time features.
+- **ORM:** Uses Prisma as a next-generation ORM for database management.
+- **Styling:** Styled with Tailwind CSS for a utility-first CSS workflow.
 
-This portfolio is built with:
+## Tech Stack
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+- **Framework:** Next.js
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **ORM:** Prisma
+- **Real-time:** Socket.IO
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
+## Installation and Setup
 
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔌 Socket.IO** - Real-time communication library
+### Prerequisites
 
-## 🚀 Quick Start
+- Node.js
+- npm
+
+### Clone the repository
 
 ```bash
-# Install dependencies
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
+```
+
+### Install Dependencies
+
+```bash
 npm install
+```
 
-# Start development server
+### Configure Environment
+
+This project does not require an environment file.
+
+## Usage
+
+To run the development server:
+
+```bash
 npm run dev
+```
 
-# Build for production
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+To build the application for production:
+
+```bash
 npm run build
+```
 
-# Start production server
+To start the production server:
+
+```bash
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your portfolio running.
+## Running Tests
 
-## 📁 Project Structure
+There are no tests configured for this project yet.
 
-```
-src/
-├── app/                 # Next.js App Router pages
-│   ├── page.tsx         # Main portfolio page
-│   ├── layout.tsx       # Root layout
-│   └── ...
-├── components/          # Reusable React components
-│   └── ui/              # shadcn/ui components
-├── hooks/               # Custom React hooks
-└── lib/                 # Utility functions and configurations
-```
+## Contributing
 
-## 🎨 Portfolio Sections
+Contributions are welcome! If you have any suggestions or find any bugs, please open an issue or submit a pull request.
 
-### 🏠 Home
-Professional introduction with a code-themed decoration showing key information.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/your-feature`).
+6. Open a pull request.
 
-### 👤 About
-Education details including university, degree, coursework, and CGPA.
+## License
 
-### 💼 Experience
-Professional experience with key achievements and responsibilities.
-
-### 🛠️ Projects
-Showcase of key projects with:
-- Project titles and descriptions
-- Technologies used
-- Key achievements and results
-
-### 🧠 Skills
-Comprehensive skill display organized by categories:
-- Core Programming
-- Machine Learning
-- Deep Learning
-- MLOps & Deployment
-- LLM & AI Engineering
-- Data Engineering
-- Development Tools
-
-### 📞 Contact
-Contact information with:
-- Email
-- Phone
-- Location
-- Social media links (GitHub, LinkedIn)
-
-## 🎯 Key Features
-
-- **📱 Fully Responsive** - Works on mobile, tablet, and desktop
-- **🌙 Dark Theme** - Modern dark-themed UI with cyan accent colors
-- **🧭 Smooth Navigation** - Scroll-based navigation highlighting active sections
-- **⚡ Real-time Features** - Socket.IO integration for potential real-time enhancements
-- **🎨 Beautiful UI** - shadcn/ui components with hover animations and transitions
-- **🚀 Performance Optimized** - Built with Next.js for optimal performance
-
-## 🛠️ Development
-
-### Available Scripts
-
-- `npm run dev` - Starts the development server with hot reloading
-- `npm run build` - Builds the application for production
-- `npm start` - Starts the production server
-- `npm run lint` - Runs ESLint for code quality checks
-- `npm run db:push` - Pushes Prisma schema to database
-- `npm run db:generate` - Generates Prisma client
-- `npm run db:migrate` - Runs Prisma migrations
-- `npm run db:reset` - Resets the database
-
-## 🤝 Customization
-
-To customize this portfolio for your own use:
-
-1. Update content in `src/app/page.tsx`
-2. Modify contact information
-3. Add your own projects and skills
-4. Update personal information (name, title, etc.)
-5. Adjust styling in Tailwind CSS classes
-
-## 📱 Responsive Design
-
-The portfolio is fully responsive with:
-- Mobile-first approach
-- Flexible grid layouts
-- Adaptive navigation (hamburger menu on mobile)
-- Properly sized touch targets
-- Optimized spacing for all screen sizes
-
-## 🎨 UI/UX Features
-
-- Smooth scrolling navigation
-- Interactive hover states on buttons and cards
-- Animated code snippet decoration
-- Section highlighting as you scroll
-- Back-to-top functionality
-- Consistent color scheme and typography
-
-## 🚀 Deployment
-
-This portfolio can be deployed to any platform that supports Next.js:
-- Vercel (recommended)
-- Netlify
-- AWS
-- DigitalOcean
-- Self-hosted Node.js server
-
-For production deployment:
-1. Update any environment variables as needed
-2. Run `npm run build` to create optimized build
-3. Deploy the `.next` directory and `package.json`
-
----
-
-Built with ❤️ using modern web technologies
+This project is licensed under the MIT License.
