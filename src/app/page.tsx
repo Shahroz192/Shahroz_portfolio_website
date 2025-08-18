@@ -28,7 +28,7 @@ export default function Portfolio() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
       
-      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+      const sections = ['home', 'about', 'projects', 'skills', 'contact'];
       const scrollPosition = window.scrollY + window.innerHeight / 2;
       
       for (const section of sections) {
@@ -143,7 +143,7 @@ export default function Portfolio() {
               Shahroz Butt
             </div>
             <div className="hidden md:flex items-center space-x-2">
-              {['home', 'about', 'experience', 'projects', 'skills', 'contact'].map((section) => (
+              {['home', 'about', 'projects', 'skills', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -190,10 +190,13 @@ export default function Portfolio() {
                   Muhammad Shahroz Butt
                 </h1>
                 <p className="text-xl md:text-2xl text-slate-300 font-medium">
-                  AI & Machine Learning Developer
+                  AI & Machine Learning Portfolio
                 </p>
                 <p className="text-lg text-slate-400 leading-relaxed max-w-3xl mx-auto">
-                  I build intelligent, full-stack AI solutions that translate complex data into real-world impact. From optimizing computer vision pipelines for real-time performance to deploying fine-tuned LLMs that solve specific business problems, I specialize in bridging the gap between raw data and production-ready applications.
+                  Welcome to my portfolio where I showcase innovative AI and Machine Learning solutions. 
+                  I specialize in creating intelligent systems that bridge the gap between cutting-edge research 
+                  and real-world applications, with a focus on computer vision, natural language processing, 
+                  and MLOps.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Button 
@@ -201,7 +204,7 @@ export default function Portfolio() {
                     size="lg" 
                     className="bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/30"
                   >
-                    View My Work
+                    Explore My Work
                   </Button>
                   <Button 
                     variant="outline" 
@@ -209,7 +212,7 @@ export default function Portfolio() {
                     size="lg" 
                     className="border-slate-600 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 hover:border-slate-500 hover:text-white transition-all duration-300 transform hover:scale-105"
                   >
-                    Get In Touch
+                    Connect With Me
                   </Button>
                 </div>
               </div>
@@ -225,41 +228,27 @@ export default function Portfolio() {
                   About Me
                 </h2>
                 <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                  My educational background and journey in AI and Machine Learning.
+                  Passionate about creating intelligent solutions that make a difference.
                 </p>
               </div>
               <GradientCard>
                 <Card className="bg-transparent border-none">
-                  <CardHeader>
-                    <div className="flex items-center gap-4">
-                      <GraduationCap className="h-8 w-8 text-cyan-400" />
-                      <CardTitle className="text-2xl text-slate-100">Education</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
+                  <CardContent className="pt-6">
                     <div className="space-y-4">
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                        <div>
-                          <h3 className="text-xl font-semibold text-slate-100">
-                            University of Agriculture Faisalabad, Pakistan
-                          </h3>
-                          <p className="text-slate-400">B.S. in Information Technology</p>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-slate-500 mt-2 md:mt-0">
-                          <Calendar className="h-4 w-4" />
-                          <span>2021 - 2025</span>
-                        </div>
-                      </div>
-                      <Separator className="bg-slate-700" />
-                      <div className="space-y-2">
-                        <p className="font-medium text-slate-300">Related Coursework:</p>
-                        <p className="text-slate-400">
-                          OOP, DSA, Machine Learning, Artificial Intelligence, Statistics, Mathematics
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Award className="h-5 w-5 text-yellow-400" />
-                        <span className="font-medium text-slate-300">CGPA: 3.20/4.00</span>
+                      <p className="text-slate-300 leading-relaxed">
+                        I'm a creative problem solver who thrives at the intersection of artificial intelligence and real-world applications. 
+                        My journey in tech has been driven by a curiosity to understand how machines can learn and adapt to help solve 
+                        complex challenges.
+                      </p>
+                      <p className="text-slate-300 leading-relaxed">
+                        When I'm not coding, you'll find me exploring the latest advancements in AI research, contributing to open-source 
+                        projects, or experimenting with new technologies to bring innovative ideas to life. I believe in the power of 
+                        technology to create positive change and strive to build solutions that are not only technically impressive but 
+                        also ethically responsible and accessible.
+                      </p>
+                      <div className="flex items-center gap-2 pt-4">
+                        <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
+                        <span className="font-medium text-slate-300">Based in Faisalabad, Pakistan</span>
                       </div>
                     </div>
                   </CardContent>
@@ -269,66 +258,16 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <section id="experience" className="py-24 md:py-32 px-6">
-          <div className="container mx-auto max-w-4xl">
-             <StaggeredAnimation>
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-400 mb-4">
-                  Experience
-                </h2>
-                <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                  My professional journey in Machine Learning and AI.
-                </p>
-              </div>
-              <GradientCard>
-                <Card className="bg-transparent border-none">
-                  <CardHeader>
-                    <div className="flex items-center gap-4">
-                      <Briefcase className="h-8 w-8 text-cyan-400" />
-                      <CardTitle className="text-2xl text-slate-100">Machine Learning Intern</CardTitle>
-                    </div>
-                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-slate-500 pt-2">
-                      <span>Tricode LLP</span>
-                      <span className="hidden sm:inline">•</span>
-                      <span>Faisalabad, Pakistan</span>
-                       <span className="hidden sm:inline">•</span>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        <span>March 2025 - April 2025</span>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    {/* --- Updated Experience Bullets --- */}
-                    <ul className="space-y-4">
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-slate-300">Engineered an automated ML pipeline to streamline a key business prediction task, reducing manual effort and creating a repeatable, data-driven workflow.</p>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-slate-300">Improved model performance by 5% through systematic hyper-parameter tuning, leading to more reliable and accurate business predictions.</p>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <p className="text-slate-300">Containerized the final service with Docker and deployed it to AWS EC2, ensuring high availability and 99.9% uptime.</p>
-                        </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </GradientCard>
-            </StaggeredAnimation>
-          </div>
-        </section>
+        
 
         <section id="skills" className="py-24 md:py-32 px-6 bg-slate-900/70">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-400 mb-4">
-                Skills & Expertise
+                Technical Skills
               </h2>
               <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-                My technical toolkit for building intelligent applications. Click a skill to see it in action in my projects below.
+                My expertise in building intelligent applications. Click any skill to see relevant projects.
               </p>
             </div>
             {selectedSkill && (
@@ -372,10 +311,10 @@ export default function Portfolio() {
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-400 mb-4">
-                Projects
+                Featured Projects
               </h2>
               <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                A selection of my work in AI and Machine Learning.
+                Explore my portfolio of AI and Machine Learning projects, showcasing innovative solutions to complex challenges.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
@@ -448,7 +387,7 @@ export default function Portfolio() {
                   Get In Touch
                 </h2>
                 <p className="text-lg text-slate-400">
-                  I'm currently available for freelance projects and full-time opportunities.
+                  Interested in collaborating on a project or just want to connect? Feel free to reach out!
                 </p>
               </div>
               <GradientCard>
@@ -496,7 +435,7 @@ export default function Portfolio() {
       <footer className="py-8 px-6 border-t border-slate-800">
         <div className="container mx-auto max-w-6xl text-center">
           <p className="text-slate-500 text-sm">
-            Designed and built by Muhammad Shahroz Butt. © 2025 All rights reserved.
+            © 2025 Muhammad Shahroz Butt. All rights reserved.
           </p>
         </div>
       </footer>
